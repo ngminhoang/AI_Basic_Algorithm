@@ -8,8 +8,6 @@ def DFS(DAU, DICH, h):
         DONG.append(S) 
         if S == DICH:
             data =Path(DONG, DICH)
-            for x in DONG:
-                print(x.name)
             for x in data:
                 print(x.name)
             return "Thanh cong"

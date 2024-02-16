@@ -6,11 +6,15 @@ class Node:
 
     def add_neighbor(self, neighbor, weight=1):
         neighbor.deep = self.deep + 1
-        self.neighbors.insert(0,(neighbor, weight))
+        self.neighbors.insert(0,[neighbor, weight])
 
     def get_neighbors(self):
         # Trả về danh sách các hàng xóm
         return [neighbor[0] for neighbor in self.neighbors]
+    
+    def get_neighbors_with_weight(self):
+        # Trả về danh sách các hàng xóm
+        return self.neighbors
 
     def get_weight(self, neighbor):
         for n, weight in self.neighbors:
